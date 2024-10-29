@@ -6,10 +6,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float jumpSpeed;
+    public GameManager game;
     Rigidbody2D rb;
     AudioSource jumpSource;
-    AudioSource hitSource;
-    public GameManager game;
     bool endGame;
 
     void Start()
@@ -18,6 +17,8 @@ public class Player : MonoBehaviour
         Pipe.speed = 0;
         jumpSource = GetComponent<AudioSource>();
         endGame = false;
+
+
     }
 
     void Update()
